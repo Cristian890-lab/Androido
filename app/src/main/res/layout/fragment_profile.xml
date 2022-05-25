@@ -1,15 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.motion.widget.MotionLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/relativeLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    app:layoutDescription="@xml/fragment_profile_scene"
     tools:context=".ProfileFragment">
 
-    <TextView
+    <Button
+        android:id="@+id/buttonMove"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Profile Fragment"
-        android:textSize="25sp"
-        android:layout_centerInParent="true" />
+        android:text="Start Animation"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-</RelativeLayout>
+    <ImageView
+        android:id="@+id/cart"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:src="@drawable/ic_shopcart"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/doneShop"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:src="@drawable/ic_check"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:src="@drawable/ic_box"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="-305dp"
+        android:text="Nam condimentum nisl in elit efficitur rhoncus. Curabitur vehicula nisl vel auctor pretium. Morbi vulputate luctus leo quis tempor. Proin vestibulum metus sit amet faucibus luctus. Duis sed felis id dui luctus suscipit non sed neque. Nunc ac blandit urna. Ut scelerisque vel orci ut accumsan. Pellentesque congue mauris a mauris semper, sed suscipit magna sagittis. Donec pellentesque, ligula eget porttitor tincidunt, neque neque viverra tellus, sed faucibus urna dui sit amet libero. Sed hendrerit scelerisque justo at euismod. Mauris nec nibh ac nisl placerat suscipit nec in dui."
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+</androidx.constraintlayout.motion.widget.MotionLayout>
